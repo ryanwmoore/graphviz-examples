@@ -1,0 +1,17 @@
+digraph G {
+    //rankdir=LR
+    start -> ingredients_gathered[label="Gather bread, preserves, PB",color="darkgreen"];
+    ingredients_gathered -> ingredients_arranged[label="Open containers, separate bread slices",color="darkgreen"];
+    ingredients_arranged -> contemplate_hunger[label="Put ingredients on bread",color="darkgreen"]
+    ingredients_arranged -> toast[label="Feeling fancy? Toast the bread!",color="red"]
+    toast -> contemplate_hunger[label="Toasting complete",color="red"]
+    contemplate_hunger -> satisfaction[label="Eat your meal",color="darkgreen"]
+    contemplate_hunger -> ingredients_gathered[label="Make an 'n'th decker",color="darkgreen"]
+
+    start[label="After Standups"]
+    ingredients_gathered[label="Ingredients Gathered"]
+    ingredients_arranged[label="Ingredients Arranged"]
+    contemplate_hunger[label="Glory Achieved"]
+    satisfaction[label="Be Satisified with your Lot in Life"]
+    toast[label="Waiting for Toaster to Toast"]
+}
